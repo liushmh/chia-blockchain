@@ -206,7 +206,7 @@ timelord_launcher:
 
 timelord:
   # The timelord server (if run) will run on this port
-  port: 8446
+  port: 18446
   # Provides a list of VDF clients expected to connect to this timelord.
   # For each client, an IP is provided, together with the estimated iterations per second.
   vdf_clients:
@@ -321,7 +321,7 @@ full_node:
       port: 18446
   introducer_peer:
       host: *self_hostname  # Chia AWS introducer IPv4/IPv6
-      port: 18333
+      port: 18445
   wallet_peer:
     host: *self_hostname
     port: 18449
@@ -386,7 +386,7 @@ wallet:
   initial_num_public_keys_new_wallet: 5
 
   full_node_peer:
-    host: *self_hostname
+    host: 18.223.140.173
     port: 18333
 
   testing: False
@@ -404,8 +404,8 @@ wallet:
   recent_peer_threshold: 6000
 
   introducer_peer:
-    host: *self_hostname # Chia AWS introducer IPv4/IPv6
-    port: 18333
+    host: 18.223.140.173 # Chia AWS introducer IPv4/IPv6
+    port: 18445
 
   ssl:
     private_crt:  "config/ssl/wallet/private_wallet.crt"
