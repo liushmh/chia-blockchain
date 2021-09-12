@@ -218,7 +218,7 @@ timelord:
       - 150000
   full_node_peer:
       host: *self_hostname
-      port: 18333
+      port: 8444
   # Maximum number of seconds allowed for a client to reconnect to the server.
   max_connection_time: 600
   # The ip and port where the TCP clients will connect.
@@ -320,7 +320,7 @@ full_node:
       host: *self_hostname
       port: 18446
   introducer_peer:
-      host: 18.223.140.173  # Chia AWS introducer IPv4/IPv6
+      host: *self_hostname  # Chia AWS introducer IPv4/IPv6
       port: 18333
   wallet_peer:
     host: *self_hostname
@@ -386,7 +386,7 @@ wallet:
   initial_num_public_keys_new_wallet: 5
 
   full_node_peer:
-    host: 18.223.140.173
+    host: *self_hostname
     port: 18333
 
   testing: False
@@ -404,7 +404,7 @@ wallet:
   recent_peer_threshold: 6000
 
   introducer_peer:
-    host: 18.223.140.173 # Chia AWS introducer IPv4/IPv6
+    host: *self_hostname # Chia AWS introducer IPv4/IPv6
     port: 18333
 
   ssl:
