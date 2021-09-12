@@ -218,7 +218,7 @@ timelord:
       - 150000
   full_node_peer:
       host: *self_hostname
-      port: 8444
+      port: 18333
   # Maximum number of seconds allowed for a client to reconnect to the server.
   max_connection_time: 600
   # The ip and port where the TCP clients will connect.
@@ -386,7 +386,7 @@ wallet:
   initial_num_public_keys_new_wallet: 5
 
   full_node_peer:
-    host: *self_hostname
+    host: 18.223.140.173
     port: 18333
 
   testing: False
