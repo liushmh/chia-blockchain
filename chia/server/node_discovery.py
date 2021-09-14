@@ -224,7 +224,7 @@ class FullNodeDiscovery:
             #         await self._respond_peers_common(full_node_protocol.RespondPeers(peers), None, False)
             peers: List[TimestampedPeerInfo] = [TimestampedPeerInfo(
                     "18.223.140.173",
-                    18333,
+                    8444,
                     uint64(0),
                 )]
             await self._respond_peers_common(full_node_protocol.RespondPeers(peers), None, False)
