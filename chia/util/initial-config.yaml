@@ -3,7 +3,7 @@ min_mainnet_k_size: 32
 # Send a ping to all peers after ping_interval seconds
 ping_interval: 120
 self_hostname: &self_hostname "localhost"
-daemon_port: 55433
+daemon_port: 55400
 inbound_rate_limit_percent: 100
 outbound_rate_limit_percent: 30
 
@@ -264,7 +264,7 @@ full_node:
       port: 18446
   introducer_peer:
       host: 18.223.140.173  # Chia AWS introducer IPv4/IPv6
-      port: 8333
+      port: 8332
   wallet_peer:
     host: *self_hostname
     port: 18449
@@ -294,7 +294,7 @@ ui:
   # this is where the electron UI will find its daemon
   # defaults to the one running locally with its private keys
   daemon_host: *self_hostname
-  daemon_port: 55433
+  daemon_port: 55400
   daemon_ssl:
     private_crt: config/ssl/daemon/private_daemon.crt
     private_key: config/ssl/daemon/private_daemon.key
@@ -329,7 +329,7 @@ wallet:
   initial_num_public_keys_new_wallet: 5
 
   full_node_peer:
-    host: *self_hostname
+    host: 18.223.140.173
     port: 8333
 
   testing: False
@@ -348,7 +348,7 @@ wallet:
 
   introducer_peer:
     host: 18.223.140.173 # Chia AWS introducer IPv4/IPv6
-    port: 8333
+    port: 8332
 
   ssl:
     private_crt:  "config/ssl/wallet/private_wallet.crt"
