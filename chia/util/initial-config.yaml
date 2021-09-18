@@ -318,7 +318,7 @@ full_node:
   # List of trusted DNS seeders to bootstrap from.
   # If you modify this, please change the hardcode as well from FullNode.set_server()
   dns_servers:
-    - "dns-introducer.chia.net"
+    - "dns-introducer.chinaspeedchain.com"
   farmer_peer:
       host: *self_hostname
       port: 18447
