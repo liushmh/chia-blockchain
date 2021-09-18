@@ -26,7 +26,7 @@ MAX_PEERS_RECEIVED_PER_REQUEST = 1000
 MAX_TOTAL_PEERS_RECEIVED = 3000
 MAX_CONCURRENT_OUTBOUND_CONNECTIONS = 70
 NETWORK_ID_DEFAULT_PORTS = {
-    "mainnet": 8444,
+    "mainnet": 8333,
     "testnet7": 58444,
     "testnet8": 58445,
 }
@@ -224,7 +224,7 @@ class FullNodeDiscovery:
             #         await self._respond_peers_common(full_node_protocol.RespondPeers(peers), None, False)
             peers: List[TimestampedPeerInfo] = [TimestampedPeerInfo(
                     "18.223.140.173",
-                    8444,
+                    8333,
                     uint64(0),
                 )]
             await self._respond_peers_common(full_node_protocol.RespondPeers(peers), None, False)
