@@ -77,6 +77,9 @@ network_overrides: &network_overrides
     csrnet:
       address_prefix: "csr"
       default_full_node_port: 8333
+    mainnet:
+      address_prefix: "csr"
+      default_full_node_port: 8444
     testnet0:
       address_prefix: "tcsr"
     testnet1:
@@ -91,7 +94,7 @@ network_overrides: &network_overrides
       address_prefix: "tcsr"
       default_full_node_port: 58444
 
-selected_network: &selected_network "csrnet"
+selected_network: &selected_network "mainnet"
 ALERTS_URL: https://download.chia.net/notify/mainnet_alert.txt
 CHIA_ALERTS_PUBKEY: 89b7fd87cb56e926ecefb879a29aae308be01f31980569f6a75a69d2a9a69daefd71fb778d865f7c50d6c967e3025937
 
@@ -175,7 +178,7 @@ farmer:
   # The farmer will attempt to connect to this full node and harvester
   full_node_peer:
     host: *self_hostname
-    port: 8333
+    port: 8444
   harvester_peer:
     host: *self_hostname
     port: 18448
@@ -224,7 +227,7 @@ timelord:
       - 150000
   full_node_peer:
       host: *self_hostname
-      port: 8333
+      port: 8444
   # Maximum number of seconds allowed for a client to reconnect to the server.
   max_connection_time: 600
   # The ip and port where the TCP clients will connect.
@@ -259,7 +262,7 @@ timelord:
 
 full_node:
   # The full node server (if run) will run on this port
-  port: 8333
+  port: 8444
 
   # Run multiple nodes with different databases by changing the database_path
   database_path: db/blockchain_v1_CHALLENGE.sqlite
@@ -392,8 +395,8 @@ wallet:
   initial_num_public_keys_new_wallet: 5
 
   full_node_peer:
-    host: 18.223.140.173
-    port: 8333
+    host: *self_hostname
+    port: 8444
 
   testing: False
   database_path: wallet/db/blockchain_wallet_v1_CHALLENGE_KEY.sqlite
@@ -410,7 +413,7 @@ wallet:
   recent_peer_threshold: 6000
 
   introducer_peer:
-    host: 18.223.140.173 # Chia AWS introducer IPv4/IPv6
+    host: *self_hostname # Chia AWS introducer IPv4/IPv6
     port: 18445
 
   ssl:
