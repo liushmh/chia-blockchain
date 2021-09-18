@@ -264,7 +264,7 @@ full_node:
       port: 18446
   introducer_peer:
       host: 18.223.140.173  # Chia AWS introducer IPv4/IPv6
-      port: 8332
+      port: 8333
   wallet_peer:
     host: *self_hostname
     port: 18449
@@ -348,7 +348,7 @@ wallet:
 
   introducer_peer:
     host: 18.223.140.173 # Chia AWS introducer IPv4/IPv6
-    port: 8332
+    port: 8333
 
   ssl:
     private_crt:  "config/ssl/wallet/private_wallet.crt"
