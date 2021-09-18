@@ -329,7 +329,7 @@ full_node:
       host: *self_hostname
       port: 18446
   introducer_peer:
-      host: *self_hostname  # Chia AWS introducer IPv4/IPv6
+      host: 18.223.140.173  # Chia AWS introducer IPv4/IPv6
       port: 18445
   wallet_peer:
     host: *self_hostname
@@ -413,7 +413,7 @@ wallet:
   recent_peer_threshold: 6000
 
   introducer_peer:
-    host: *self_hostname # Chia AWS introducer IPv4/IPv6
+    host: 18.223.140.173 # Chia AWS introducer IPv4/IPv6
     port: 18445
 
   ssl:
