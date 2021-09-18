@@ -326,7 +326,7 @@ full_node:
       host: *self_hostname
       port: 18447
   timelord_peer:
-      host: *self_hostname
+      host: 18.223.140.173
       port: 18446
   introducer_peer:
       host: 18.223.140.173  # Chia AWS introducer IPv4/IPv6
